@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About|Medical Buzz</title>
+</head>
+<script>
+function togglediv(id){
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "none" ? "block" : "none";
+        }
+
+
+
+  function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+<style>
+  *{
+         box-sizing: border-box;
+      }
+
+      @media screen and (min-width: 1039px){
+        .openbtn{
+           display: none;
+        }
+        .sidepanel{
+           display: none;
+        }
+        
+     }
+     html {
+  box-sizing: border-box;
+}
+.rm{
+  font-family: 'Nanum Gothic', sans-serif;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #0082B9;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.rm:hover{
+  background-color: #FDD566;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 620px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  background-color: #FDD566;
+  position: relative;
+  top:-120px;
+  font-size: 30px;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding-left: 3%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  
+
+}
+
+
+
+    
+
+
+body{
+         margin: 0;
+         color: #7F7F7F;
+        font-family: 'Nanum Gothic', sans-serif;
+        
+      }
+      .topbar{
+         overflow: hidden;
+         top: 0;
+         width: 100%;
+         position: fixed;
+         z-index: 3;
+         height: 53px;
+         background-color: white;
+         
+      }
+      .mblogo{
+         position: fixed;
+         left: 4%;
+         top: 1%;
+      }
+      .headingtop{
+         position: fixed;
+         left: 8.5%;
+         top: 1%;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 21px ;
+         font-weight: 600;
+      }
+      .subheadingtop{
+         position: fixed;
+         left: 8.3%;
+         top: 5%;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 14px;
+         letter-spacing: 0.5px;
+         font-weight: 600;
+      }
+      
+
+ul.main-navigation {
+   position: fixed;
+   left: 23%;
+   top: 3%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  z-index: 3;
+}
+
+ul.main-navigation li {
+  display: block;
+  position: relative;
+  float: left;
+  padding-left: 28px;
+  
+}
+li ul.main-navigation { display: none; }
+
+ul.main-navigation li a {
+  display: block;
+  padding-left: 19px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #7F7F7F;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+ul.main-navigation li a:hover { 
+  color: #0082B9;
+  
+   }
+li:hover > ul.main-navigation {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+.bookcons{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #0082B9;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 2%;
+}
+
+.bookcons:hover{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #FDD566;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 2%;
+   cursor: pointer;
+}
+.leftlist{
+    position: relative;
+    left: 150px;
+    font-size: 23px;
+    display: inline-block;
+    
+}
+
+.rightlist{
+    position: relative;
+   left: 350px;
+   list-style-type: disc;
+   font-size: 23px;
+   display: inline-block;
+}
+.text{
+    position: relative;
+    left: 90px;
+    font-size: 25px;
+    top: 30px;
+    font-weight: 500;
+    width: 80%;
+}
+
+
+.wholine{
+  width: 100%;
+   height: 20px;
+    border-bottom: 2.5px solid gray;
+     text-align: center;
+     position: relative;
+      top: 20px;
+}
+.wholine span{
+  font-size: 45px;
+   background-color: white;
+    padding: 0 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: gray;
+}
+
+.whatline{
+  width: 100%;
+   height: 20px;
+    border-bottom: 2.5px solid gray;
+     text-align: center;
+     position: relative;
+      
+}
+.whatline span{
+  font-size: 45px;
+   background-color: white;
+    padding: 0 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: gray;
+}
+
+.whyline{
+  width: 100%;
+   height: 20px;
+    border-bottom: 2.5px solid gray;
+     text-align: center;
+     position: relative;
+      
+}
+.whyline span{
+  font-size: 45px;
+   background-color: white;
+    padding: 0 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: gray;
+}
+
+.fa {
+  
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   position: relative;
+   left: 110%;
+  
+  color: #7f7f7fff;
+}
+
+.fa-facebook:hover{
+    color: #2980b9;
+}
+.fa-twitter:hover{
+    color: #2980b9;
+}
+.fa-twitter {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-linkedin:hover{
+    color: #2980b9;
+}
+.fa-linkedin {
+   position: relative;
+   left: 110%;
+  
+  color:#7f7f7fff;
+}
+.fa-instagram:hover{
+    color: #2980b9;
+}
+.fa-instagram {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-envelope{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 110%;
+   margin-top: 20px;
+}
+.fa-envelope:hover{
+   color:#2980b9 ;
+   cursor: pointer;
+}
+.footer{
+   position: absolute;
+   
+   height: 200px;
+
+}
+.mailfoot{
+   position: relative;
+   left: 120%;
+   top: -40px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+
+.fa-phone{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 107%;
+   top: -50px;
+   margin-top: 20px;
+}
+
+.phonefoot{
+   position: relative;
+   left: 117%;
+   top: -90px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+.copyright{
+   position: relative;
+   left: 87% ;
+   top: -80px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+@media screen and (max-width:1040px){
+  .leftlist{
+    position: relative;
+    left: 15%;
+    font-size: 22px;
+    display: inline-block;
+    
+}
+
+.rightlist{
+    position: relative;
+   left: 15%;
+   list-style-type: disc;
+   font-size: 22px;
+   display: inline-block;
+}
+  .text{
+    
+    left: 10%;
+    font-size: 22px;
+    top: 30px;
+    font-weight: 500;
+    width: 80%;
+}
+         img.mblogo{
+         position: fixed;
+         left: 45%;
+         top: 1%;
+         }
+         .headingtop{
+            display: none;
+         }
+         .subheadingtop{
+            display: none;
+         }
+         .main-navigation{
+            display: none;
+         }
+         .bookcons{
+            display: none;
+         }
+         .bookco{
+            position: relative;
+            left: 20%;
+            background-color: #0082B9;
+            padding: 10px;
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+         .bookco:hover{
+            color: white;
+            cursor: pointer;
+         }
+
+         .sidepanel {
+            
+  height: auto; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #FDD566; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  position: relative;
+  left: 20%;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  width: 100%;
+  font-size: 36px;
+  
+  color: white;
+}
+.sidepanel .closebtn:hover{
+   color: #7f7f7f;
+}
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+   
+  font-size: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: #7F7F7F;
+  padding: 7px;
+  border: none;
+  outline: none;
+  
+}
+
+.openbtn:hover {
+  background-color: #FDD566;
+}
+
+
+
+
+
+.aboutimg img{
+   object-fit: cover;
+   height: 600px;
+   width: 100%;
+   object-position: 30% 10%;
+}
+
+.wholine span{
+  font-size: 30px;
+}
+.whatline span{
+  font-size: 30px;
+   
+}
+.whyline span{
+  font-size: 30px;
+   
+}
+      }
+</style>
+<body>
+    <div class="topbar">
+       <img class="mblogo" src="mblogo.png" alt="logo" width="60px">
+       <span class="headingtop">MEDICAL BUZZ</span>
+       <span class="subheadingtop">HEALTHCARE PVT. LTD.</span>
+       <ul class="main-navigation">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Blog</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+       </ul>
+       <span class="bookcons"><a href="contact.html" style="text-decoration: none; color: white;">Book Consultation</a></span>
+       <div id="mySidepanel" class="sidepanel">
+          
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button href="contact.html" class="bookco">Book Consultation</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+   </div>
+
+   <div class="aboutimg">
+       <img src="aboutus.png" alt="about" width="100%">
+       <a id="whoweare"></a>
+   </div>
+   
+   <div class="wholine">
+    <span>
+      WHO ARE WE? <!--Padding is optional-->
+    </span>
+  </div>
+
+
+  <p class="text" style="line-height: 40px;"> An organization that provides comprehensive hospital management consultancy services.<br />
+    The A to Z of hospital management, from planning a hosptal to reviving a sick project. <br />
+    We are an integrated team of:<br /></p>
+  <div><ul class="leftlist">
+          <li>Doctors</li><br />
+          <li>Hospital Administrators</li><br />
+          <li>Medical Planners</li><br />
+          <li>Architects</li><br />
+          <li>Engineers</li><br />
+          <li>Interior Designers</li>
+        </ul> 
+        <ul class="rightlist">   
+          
+          <li>Bio-medical Experts</li><br />
+          <li>Chartered Accountants</li><br />
+          <li>IT-Specialists</li><br />
+          <li>Social Media Managers</li><br />
+          <li>Website Designers</li><br />
+      </ul> </div>    
+  <p class="text" style="line-height: 40px;top: 0px;">under one roof, offering healthcare need-based solutions, right from conceptualizing a project,
+      to help a sinking project. </p>
+  
+      
+          
+          
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="drmunjalimg.jpg" alt="drmunjal" style="width:100%">
+            <div class="container">
+              <h2 style="position: relative; top: 30px;">Dr. Rajeev Munjal</h2>
+              <p class="title">Founder Director</p>
+              <p>Leadership | Marketing</p>
+              <p>Dr. Munjal is a physician by profession, working in the healthcare industry since...</p>
+              <button id="b1" class="rm" onclick="togglediv('munjal')" type="button">READ MORE  </button>
+       <p id="munjal" class="open" style="display:none;line-height: 30px;">more than 15 years now. <br />
+        He has a strong passion for hospital management and that drive brought him to the field of
+        administration. Presently he is working as associate director in Medanta S.N. Superspeciality Hospital,
+        Sriganganagar, Rajasthan.<br />
+        He also has a creative side, which flows in his another venture 'Medical Buzz', a leading monthly newspaper
+        in healthcare.<br />
+        IDPD - State Vice President.<br />
+        IMA IFSE - State Secretary.<br />
+        IMA - Hanumangarh - Secretary.<br />
+        Represented doctors on various platforms since a long time.
+        </p>
+       
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="drbajajimg.png" alt="drbajaj" style="width:100%">
+            <div class="container">
+              <h2 style="position: relative; top: 30px;">Dr. Shuchin Bajaj</h2>
+              <p class="title">Advisor</p>
+              <p>Management | Healthcare</p>
+              <p>Dr. Bajaj is the Founder Director of Ujala Cygnus Hospitals, which is currently operating...  
+                
+              </p>
+                <button id="b2" class="rm" onclick="togglediv('bajaj')" type="button">READ MORE  </button>
+                <p id="bajaj" class="open" style="display:none;line-height: 30px;">
+                  twelve hospitals in Delhi, Uttarakhand, Uttar Pradesh and Haryana with a combined bed strength of 1200 beds and more than 1800 employees.
+                  Shuchin is a highly qualified medical scholar. After completing his MBBS from PGIMS, Rohtak, he did his Doctorate in Internal Medicines (MD) from Dr S N Medical College, Jodhpur in 2004. Apart from the foregoing, he also did Certified Professional course on Diabetes Management and Total Control from American Academy of Continuing Medical Education, USA in 2008, Advanced Program in Strategic Management from I.I.M. Calcutta in 2013 and Advanced Program in Cardiac Emergencies from Boston University in 2014.
+                 Dr Bajaj was the recipient of the British Government’s 2015 Chevening Gurukul Fellowship for Leadership and Excellence award at King’s College London, where he spent considerable time studying the various facets of Leadership, its various challenges and its learnings for India. 
+                He was also selected for freeship to the ‘Innovating Health for Tomorrow” Fellowship at INSEAD, France in 2017 and his project for Ambulance services was the top of the class of 40 high ranked professionals from around the world.
+                Shuchin is also an Aspire Fellow, a Fellowship dedicated to enlightened social leadership, held at IIM, Ahmedabad and conducted by Dr. Pradeep Khandwala, Ex Director, IIMA.
+                He has also completed the Elite Seed Transformation Program conducted by the Stanford Global Business School.
+                He is on the board of a number of national prominent NGOs as Advisor-Health Programmes and over the last five years has been playing an active part in the Helpage International’s Regional Research Initiative on Older People’s Health as the Academic partner of the International Health Working Group, as well as being part of the Healthcare Track for Xynteo’s India2022 coalition.
+                In addition to numerous other awards and accolades, Shuchin has received the “World Wide Achievers Health Care Excellence Award 2014” for Healthcare Excellence in Internal Medicine in Delhi and NCR, ”Best Consultant in Internal Medicine in Delhi 2012” by the Time Research Media Foundation, “National Award for Excellence in Healthcare 2015” for fastest growing healthcare chain in North India along with “2015 Leaders Award”. In the past Dr. Bajaj has also received “Stars of the Industry Healthcare Awards” for excellence in managing tertiary healthcare centers in Tier-II towns, “4th MT India Healthcare Awards” for most promising healthcare chain of India, Most Promising Healthcare Brand and Best Upcoming Hospital Chain, amongst others. Dr Bajaj and the Cygnus Team were recently featured by the Economic Times in a feature on Entrepreneurs Leading Disruptive Change. Dr. Bajaj is also the winner the Healthcare Leader of the Year, 2017 Awards.
+                Shuchin is an avid Healthcare Investor and is associated with multiple Health Tech Companies as investor, Board Member and mentor. He is on the TBIU Board of IIT, Delhi and is also a member of the Advisory Council to the Minister of State for Health, Shri Ashwini Choubey.
+              
+                 </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="drsihagimg.png" alt="drsihag" style="width:100%">
+            <div class="container">
+              <h2 style="position: relative; top: 30px;">Dr. S.L. Sihag</h2>
+              <p class="title">Advisor</p>
+              <p >Leadership | Projects</p>
+              <p>Dr. S.L. Sihag is a visionary entrepreneur in healthcare industry who has...</p>
+              <button id="b3" class="rm" onclick="togglediv('sihag')" type="button">READ MORE  <a id="whatwedo"></a></button>
+              <p id="sihag" class="open" style="display:none;line-height: 30px;">
+                  established many hospitals ranging from multi speciality to super-speciality along 
+                  with healthcare institutes. <br />
+                  He has an experience of more than 30 years in healthcare facility management.
+                </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="whatline">
+        <span>
+          WHAT WE DO? <!--Padding is optional-->
+        </span>
+      </div>
+
+      <div>
+        <p class="text" style="line-height: 55px;top: 10px;">We offer you help in managing your dream healthcare facility right from conceiving 
+          the idea of building a hospital to get it to flourish.<br />
+          We at Medical Buzz Healthcare Pvt. Ltd. are trying to provide comprehensive hospital management 
+          consultancy services to hospitals, clinics, diagnostic centers and other patient care providing 
+          organizations under one roof.<br />
+          We offer a wide variety of services. To know more about what we do, kindly visit our services page.
+
+          <a id="whychooseus"></a>
+        </p>
+      </div>
+
+      <div class="whyline">
+        <span>
+          WHY CHOOSE US? <!--Padding is optional-->
+        </span>
+      </div>
+
+
+      <div>
+        <p class="text" style="line-height: 55px;top: 10px;">Striving for a better future.<br />
+        If you are dreaming of building a patient care facility be it a single speciality,
+      clinic, nursing-home, multi-speciality, super-speciality, diagnostic center. We can 
+    help you to visualize your dream, to plan, to design, to conceptualize, offer human resource, 
+  manage day-to-day challanges including IT support, H.I.S., marketing, advertisement, publicity, diiferent 
+accrediations, empanelments, website designing and social media marketing. <br />
+If you are in search of any of these services, we are happy to help.</p>
+      </div>
+     <hr style="background-color: #7F7F7F;height: 4px;"/>
+
+      <div class="footer">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a><br />
+        <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz@gmail.com</p>
+        <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">0987650987,&nbsp; &nbsp;1237654327</P>
+        <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
+     </div>
+</body>
+</html>       
+
+
+
+
+

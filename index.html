@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <title>Medical Buzz</title>
+  <script>
+     var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+/* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+  </script>
+
+   <style>
+      *{
+         box-sizing: border-box;
+      }
+     @media screen and (min-width: 1039px){
+        .openbtn{
+           display: none;
+        }
+        .sidepanel{
+           display: none;
+        }
+        .recposts_resp{
+           display: none;
+        }
+        .recposts_resp2{
+           display: none;
+        }
+     }
+      @media screen and (max-width:1040px){
+         
+         img.mblogo{
+         position: fixed;
+         left: 45%;
+         top: 1%;
+         }
+         .headingtop{
+            display: none;
+         }
+         .subheadingtop{
+            display: none;
+         }
+         .main-navigation{
+            display: none;
+         }
+         .bookcons{
+            display: none;
+         }
+         .bookco{
+            position: relative;
+            left: 20%;
+            background-color: #0082B9;
+            padding: 10px;
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+         .bookco:hover{
+            color: white;
+            cursor: pointer;
+         }
+
+         .sidepanel {
+            
+  height: auto; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #FDD566; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  position: relative;
+  left: 20%;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  width: 100%;
+  font-size: 36px;
+  
+  color: white;
+}
+.sidepanel .closebtn:hover{
+   color: #7f7f7f;
+}
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+   
+  font-size: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: #7F7F7F;
+  padding: 7px;
+  border: none;
+  outline: none;
+  
+}
+
+.openbtn:hover {
+  background-color: #FDD566;
+}
+
+
+
+
+.heading p{
+   font-size: 40px;
+}
+.tagline p{
+   font-size: 40px;
+}
+.backimg img{
+   object-fit: cover;
+   height: 600px;
+   width: 100%;
+}
+      }
+      body{
+         margin: 0;
+      }
+      .topbar{
+         overflow: hidden;
+         top: 0;
+         width: 100%;
+         position: fixed;
+         z-index: 3;
+         height: 53px;
+         background-color: white;
+         
+      }
+      .mblogo{
+         position: fixed;
+         left: 4%;
+         top: 1%;
+      }
+      .headingtop{
+         position: fixed;
+         left: 8.5%;
+         top: 1%;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 21px ;
+         font-weight: 600;
+      }
+      .subheadingtop{
+         position: fixed;
+         left: 8.3%;
+         top: 5%;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 14px;
+         letter-spacing: 0.5px;
+         font-weight: 600;
+      }
+      
+
+ul {
+   position: fixed;
+   left: 23%;
+   top: 3%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  z-index: 3;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  padding-left: 28px;
+  
+}
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding-left: 19px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #7F7F7F;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+ul li a:hover { 
+  color: #0082B9;
+  
+   }
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+.bookcons{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #0082B9;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 2%;
+}
+
+.bookcons:hover{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #FDD566;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 2%;
+   cursor: pointer;
+}
+.backimg img{
+   width: 100%;
+   
+}
+.backimg{
+   position: relative;
+  text-align: center;
+  color: white;
+}
+.heading{
+   position: absolute;
+   top: 310px;
+   
+   font-size: 50px;
+   left: 10%;
+   color: #7F7F7F;
+   font-family: 'Nanum Gothic', sans-serif;
+   letter-spacing: 3px;
+   text-align: left;
+   
+}
+.tagline{
+   position: absolute;
+   top: 440px;
+   color: #0082B9;
+   font-size: 50px;
+   left: 10%;
+   font-family: 'Nanum Gothic', sans-serif;
+   letter-spacing: 3px;
+   text-align: left;
+   
+}
+.aboutpart{
+   background-color: #0082B9;
+   position: absolute;
+   top: 600px;
+   width: 100%;
+   height: auto;
+}
+.aboutpart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  .col{
+   float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+  }
+.card {
+        
+        height: auto;
+        position: relative;
+        padding-left: 150px;
+        
+        
+        
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 150px;
+        z-index: 2;
+    }
+    .card:hover .img-top {
+        display: inline;
+        cursor: pointer;
+    }
+    .card2 {
+      padding-left: 80px;
+        height: auto;
+        position: relative;
+        
+        
+        
+    }
+    .card2 .img-top2 {
+        display: none;
+        position: absolute;
+
+        top: 9px;
+        left: 80px;
+        z-index: 2;
+    }
+    .card2:hover .img-top2 {
+        display: inline;
+        cursor: pointer;
+    }
+
+    .card3 {
+      padding-left: 20px;
+        height: auto;
+        position: relative;
+        
+        
+        
+    }
+    .card3 .img-top3 {
+        display: none;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        z-index: 2;
+    }
+    .card3:hover .img-top3 {
+        display: inline;
+        cursor: pointer;
+    }
+     
+
+
+
+
+    .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+.flip-card-inner {
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.content{
+   position: absolute;
+   top: 940px;
+   
+
+   
+}
+
+.imgBox { /* now a container for the image */
+    display: inline-block; /* shrink wrap to image */
+    overflow: hidden; /* hide the excess */
+    position: relative;
+    left: 80px;
+    display: inline-block;
+    background-color: black;
+  }
+
+  
+  .imgBox img {
+    display: block; /* no whitespace */
+    transition: .3s ease-in-out;
+    
+    
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .imgBox:hover img {
+    transform: scale(1.3);
+    opacity: 0.3;
+   filter: alpha(opacity=30);
+  }
+  
+  .readmore a{
+     color: white;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+    opacity: 0;
+     padding-top: 120px;
+     padding-bottom: 120px;
+     padding-right: 220px;
+     padding-left:220px ;
+     margin: 0;
+     z-index: 100;
+     text-decoration: none;
+     font-family:'Nanum Gothic', sans-serif ;
+  }
+  .readmore :hover{
+     opacity: 1;
+     cursor: pointer;
+  }
+
+  .imgBox2 { /* now a container for the image */
+    display: inline-block; /* shrink wrap to image */
+    overflow: hidden; /* hide the excess */
+    position: relative;
+    left: 700px;
+    top: -300px;
+    display: inline-block;
+    background-color: black;
+  }
+  .imgBox2 img {
+    display: block; /* no whitespace */
+    transition: .3s ease-in-out;
+    
+    
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .imgBox2:hover img {
+    transform: scale(1.3);
+    opacity: 0.3;
+   filter: alpha(opacity=30);
+  }
+
+  .post1{
+     position: relative;
+     display: inline-block;
+     left:-400px;
+     top: 200px;
+     width: 400px;
+     background-color: white;
+    
+
+  }
+
+  .post2{
+     position: relative;
+     display: inline-block;
+     width: 400px;
+     left: 220px;
+     top: -100px;
+     background-color: white;
+     
+    
+
+  }
+  .recposts{
+    position: absolute;
+    top: 1700px;
+  }
+  
+  .event1{
+     position: absolute;
+     top:2300px;
+     
+     
+  }
+  .eventdetail{
+     position: relative;
+     display: inline-block;
+     font-family:'Nanum Gothic', sans-serif  ;
+     color: white;
+     background-color: #7f7f7fff;
+     font-weight: 500;
+     font-size: 30px;
+     padding-right: 40px;
+     padding-left: 40px;
+     height: 200px;
+  }
+  .booknow{
+   font-family:'Nanum Gothic', sans-serif  ;
+     display: inline-block;
+   background-color: #fdd76cff;
+   font-weight: 700;
+   position: relative;
+   font-size: 30px;
+   top: -15px;
+   width: 200px;
+   padding: 50px;
+   padding-top: 37px;
+   padding-bottom: 37px;
+   padding-left: 5%;
+  }
+
+  .book:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color:#7f7f7fff ;
+  }
+  .book{
+    color: white;
+    text-decoration: none;
+  }
+ .form{
+    position: absolute;
+    top: 2620px;
+    
+    background-color: lightgray;
+    text-align: center;
+    left: 20%;
+    width: 60%;
+    font-family:'Nanum Gothic', sans-serif  ;
+    font-size: 30px;
+    color: #7f7f7fff ;
+ }
+ input[type=email], input[type=text], input[type=tel]{
+           border: 3px solid #c7c7c7;
+           
+           outline: none;
+           cursor: text;
+           padding: 5px;
+       }
+       textarea{
+        border: 3px solid #c7c7c7;
+           margin-left: 10px;
+           outline: none;
+           cursor: text;
+           padding: 5px;
+           margin-top: 10px;
+       }
+  
+       input[type=submit]{
+           color: #ffffff;
+           background-color: #2980b9;
+           font-family:'Nanum Gothic', sans-serif  ;
+           border: none;
+           font-weight: 700;
+           font-size: 30px;
+           width: 100%;
+           padding-left: 15px;
+           padding-right: 15px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           margin-top: 20px;
+           outline: none;
+       }
+
+
+       input[type=submit]:hover{ 
+           color: #7f7f7fff;
+           background-color: #fdd76cff;
+           font-family:'Nanum Gothic', sans-serif  ;
+           border: none;
+           font-weight: 700;
+           font-size: 30px;
+           width: 100%;
+           padding-left: 15px;
+           padding-right: 15px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           margin-top: 20px;
+           outline: none;
+           cursor: pointer;
+       }
+
+       .reviews{
+          position: absolute;
+          top: 3350px;
+          font-family:'Nanum Gothic', sans-serif  ;
+          background-color: #fdd76cff;
+          color: #7f7f7fff;
+          font-size: 35px;
+          height: 500px;
+          width: 100%;
+          text-align: center;
+       }
+       .rev1{
+          position: relative;
+          background-color: white;
+          top: -100px;
+          width: 70%;
+          height: 350px;
+          left: 15%;
+          border-radius: 20px;
+       }
+       .rev1 img{
+          width: 200px;
+          position: relative;
+          top: 60px;
+         left: -300px;           
+       }
+       .rev1 p{
+          position: relative;
+          width: 60%;
+          left: 260px;
+          top: -170px;
+          font-size: 20px;
+       }
+       
+       .leftb, .rightb{
+         outline: none;
+         border: none;
+         padding: 0px;
+         cursor: pointer;
+         
+       }
+       .leftb{
+          position: relative;
+          top: 150px;
+          left: -480px;
+       }
+       .rightb{
+          position: relative;
+          top: 150px;
+          left: 480px;
+       }
+
+       .fa {
+  
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   position: relative;
+   left: 110%;
+  
+  color: #7f7f7fff;
+}
+
+.fa-facebook:hover{
+    color: #2980b9;
+}
+.fa-twitter:hover{
+    color: #2980b9;
+}
+.fa-twitter {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-linkedin:hover{
+    color: #2980b9;
+}
+.fa-linkedin {
+   position: relative;
+   left: 110%;
+  
+  color:#7f7f7fff;
+}
+.fa-instagram:hover{
+    color: #2980b9;
+}
+.fa-instagram {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-envelope{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 110%;
+   margin-top: 20px;
+}
+.fa-envelope:hover{
+   color:#2980b9 ;
+   cursor: pointer;
+}
+.footer{
+   position: absolute;
+   top: 3900px;
+   height: 200px;
+
+}
+.mailfoot{
+   position: relative;
+   left: 120%;
+   top: -40px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+
+.fa-phone{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 107%;
+   top: -50px;
+   margin-top: 20px;
+}
+
+.phonefoot{
+   position: relative;
+   left: 117%;
+   top: -90px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+.copyright{
+   position: relative;
+   left: 87% ;
+   top: -80px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+
+.servline{
+   width: 100%;
+    height: 20px;
+     border-bottom: 2.5px solid gray;
+      text-align: center;
+      position: relative;
+       top: 200px; 
+}
+.servline span{
+   font-size: 45px;
+    background-color: white;
+     padding: 0 20px;
+     font-family: 'Nanum Gothic', sans-serif;
+     color: gray;
+}
+
+.postline{
+   width: 100%;
+    height: 20px; 
+    border-bottom: 2.5px solid gray;
+     text-align: center;
+     position: relative;
+      top: 920px; 
+}
+
+.postline span{
+   font-size: 45px;
+    background-color: white;
+     padding: 0 20px;
+     font-family: 'Nanum Gothic', sans-serif;
+     color: gray;
+}
+
+.upcomline{
+   width: 100%;
+    height: 20px; 
+    border-bottom: 2.5px solid gray;
+     text-align: center;
+     position: relative;
+      top: 1500px;
+}
+
+.upcomline span{
+   font-size: 45px;
+    background-color: white;
+     padding: 0 20px;
+     font-family: 'Nanum Gothic', sans-serif;
+     color: gray;
+}
+.contactline{
+   width: 100%;
+    height: 20px; 
+    border-bottom: 2.5px solid gray; 
+    text-align: center;
+    position: relative;
+     top: 1800px;
+}
+.contactline span{
+   font-size: 45px;
+    background-color: white;
+     padding: 0 20px;
+     font-family: 'Nanum Gothic', sans-serif;
+     color: gray;
+}
+@media screen and (max-width:1040px){
+   .footer{
+   position: absolute;
+   top: 5130px;
+   height: 200px;
+
+}
+.fa {
+  
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   
+   left: 20%;
+  
+  
+}
+
+
+
+
+.fa-twitter {
+   
+   left: 20%;
+  
+}
+
+.fa-linkedin {
+   
+   left: 20%;
+  
+  
+}
+
+.fa-instagram {
+  
+   left: 20%;
+  
+}
+.fa-envelope{
+   
+   left: 20%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 30%;
+   width: 60%;
+   
+}
+
+.fa-phone{
+   
+   left: 20%;
+   
+}
+
+.phonefoot{
+   width: 60%;
+   left: 30%;
+   
+}
+
+.copyright{
+   
+   padding-right: 0px;
+   left: 4% ;
+   
+}
+   
+   
+   
+   
+   
+   .reviews{
+      top: 4300px;
+      height: 770px;
+      height: auto;
+   }
+   .rev1{
+      width: 80%;
+          left: 9%;
+          height: auto;
+   }
+   .rev1 img{
+          width: 200px;
+          position: relative;
+          left: 0px;
+          top: 10px;
+                    
+       }
+       .rev1 p{
+          position: relative;
+          width: 90%;
+          left: 5%;
+          top: 0%;
+          padding-bottom: 20px;
+       }
+       .leftb{
+          position: relative;
+          top: -50%;
+          left: -43%;
+
+       }
+       .rightb{
+          position: relative;
+          top: -50%;
+          left: 40%;
+       }
+   .form{
+      top: 3620px;
+      font-size: 20px;
+      width: 70%;
+      left: 15%;
+      padding: 5%;
+   }
+   textarea{
+        border: 3px solid #c7c7c7;
+           width: 80%;
+           outline: none;
+           cursor: text;
+           padding: 5px;
+           margin-top: 10px;
+       }
+   .event1{
+      width: 100%;
+      top: 3300px;
+      
+   }
+   .booknow{
+      width: 25%;
+      font-size: 3vw;
+      height: auto;
+      top: -35px;
+      }
+   .eventdetail{
+      width: 70%;
+      font-size: 3vw;
+      height: auto;
+   }
+   .recposts_resp{
+      position: absolute;
+      top: 2840px;
+      width: 100%;
+
+   }
+   .recposts_resp img{
+      width: 30%;
+      margin-left: 5%;
+   }
+   .recposts_resp2{
+      position: absolute;
+      top: 3040px;
+      width: 100%;
+
+   }
+   .recposts_resp2 img{
+      width: 30%;
+      margin-left: 5%;
+   }
+   .recposts{
+       display: none;
+    } 
+         .content{
+            width: 100%;
+         }
+         .flip-card{
+            width: 48%;
+         }               
+         .col{
+            width: 100%;
+         }
+         .card,.card2, .card3{
+            padding-left: 35%;
+         }
+         .card2 .img-top2 {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 35%;
+        z-index: 2;
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 7px;
+        left: 35%;
+        z-index: 2;
+    }
+    .card3 .img-top3 {
+        display: none;
+        position: absolute;
+        top: 7px;
+        left: 35%;
+        z-index: 2;
+    }
+    .servline{
+       top: 780px;
+    }
+    .servline span{
+       font-size: 30px;
+    }
+    .content{
+       top: 1415px;
+       margin-left: 0%;
+    }
+    .postline{
+       top: 2160px;
+    }
+    .postline span{
+       font-size: 30px;
+    }
+    .upcomline{
+       top: 2590px;
+    }
+    .upcomline span{
+       font-size: 30px;
+    }
+    .contactline{
+       top: 2890px;
+    }
+    .contactline span{
+       font-size: 30px;
+    }
+}
+@media screen and (max-width:600px){ 
+    
+    
+   .col{
+            width: 100%;
+         }
+         .card,.card2, .card3{
+            padding-left: 20%;
+         }
+         .card2 .img-top2 {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 20%;
+        z-index: 2;
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 7px;
+        left: 20%;
+        z-index: 2;
+    }
+    .card3 .img-top3 {
+        display: none;
+        position: absolute;
+        top: 7px;
+        left: 20%;
+        z-index: 2;
+    }
+    
+}
+@media screen and (max-width:620px){
+   .footer{
+   position: absolute;
+   top: 6330px;
+   height: 200px;
+
+}
+.fa {
+  
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   
+   left: 20%;
+  
+  
+}
+
+
+
+
+.fa-twitter {
+   
+   left: 20%;
+  
+}
+
+.fa-linkedin {
+   
+   left: 20%;
+  
+  
+}
+
+.fa-instagram {
+  
+   left: 20%;
+  
+}
+.fa-envelope{
+   
+   left: 20%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 30%;
+   width: 60%;
+   
+}
+
+.fa-phone{
+   
+   left: 20%;
+   
+}
+
+.phonefoot{
+   width: 60%;
+   left: 30%;
+   
+}
+
+.copyright{
+   
+   padding-right: 0px;
+   left: 4% ;
+   
+}
+
+
+   .reviews{
+      top: 5500px;
+      height: 770px;
+      height: auto;
+   }
+   .rev1{
+      width: 80%;
+          left: 9%;
+          height: auto;
+
+   }
+   .rev1 img{
+          width: 200px;
+          position: relative;
+          left: 0px;
+          top: 10px;
+                    
+       }
+       .rev1 p{
+          position: relative;
+          width: 90%;
+          left: 5%;
+          top: 0%;
+       }
+       .leftb{
+          position: relative;
+          top: 40%;
+          left: -40%;
+          
+
+       }
+       .rightb{
+          position: relative;
+          top: 40%;
+          left: 40%;
+          
+       }
+   .form{
+      top: 4780px;
+      font-size: 20px;
+      width: 70%;
+      left: 15%;
+      padding: 5%;
+   }
+   textarea{
+        border: 3px solid #c7c7c7;
+           width: 80%;
+           outline: none;
+           cursor: text;
+           padding: 5px;
+           margin-top: 10px;
+       }
+   .event1{
+      width: 100%;
+      top: 4530px;
+      
+   }
+   .recposts_resp{
+      position: absolute;
+      top: 4240px;
+      width: 100%;
+
+   }
+   .recposts_resp2{
+      position: absolute;
+      top: 4340px;
+      width: 100%;
+
+   }
+   .content{
+       top: 1415px;
+       
+    }
+    .flip-card, .flip-card-back, .flip-card-inner{
+       width: 100%;
+       padding-left: 20%;
+       padding-right: 20%;
+       left: 0%;
+    }
+    .flip-card-front{
+       padding-left: 0%;
+       left: -7%;
+    }
+    .postline{
+       top: 3560px;
+    }
+    .postline span{
+       font-size: 30px;
+    }
+    .upcomline{
+       top: 3820px;
+    }
+    .contactline{
+       top: 4050px;
+    }
+    .contactline span{
+       font-size: 30px;
+    }
+}
+
+   </style>
+</head>
+<body>
+   <div class="topbar">
+       <img class="mblogo" src="mblogo.png" alt="logo" width="60px">
+       <span class="headingtop">MEDICAL BUZZ</span>
+       <span class="subheadingtop">HEALTHCARE PVT. LTD.</span>
+       <ul class="main-navigation">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Blog</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+       </ul>
+       <span class="bookcons"><a href="contact.html" style="text-decoration: none;color: white;">Book Consultation</a></span>
+       <div id="mySidepanel" class="sidepanel">
+          
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <button onclick="" class="bookco">Book Consultation</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+   </div>
+
+   
+    
+
+   <div class="backimg">
+      <img src="backimg.jpeg" alt="back">
+      <div class="heading">
+         <p>MEDICAL&nbsp; BUZZ<br />
+            HEALTHCARE 
+         
+         </p>
+      </div>
+      <div class="tagline">
+          <p>
+            #HELPING&nbsp; HEALTHCARE.
+          </p>
+      </div>
+   </div>
+   <div class="aboutpart">
+      <div class="card col">
+         <img src="whoimg.png" alt="Card Back" width="200px" height="220" style="text-align: center;">
+          <a href="about.html#whoweare" target="_blank"><img src="whoimgh.png" class="img-top" alt="Card Front"  width="200px" height="230"></a>
+          
+      </div>
+      
+      <div class="card2 col">
+         <img src="whatdo.png" alt="Card Back" width="200px" height="230">
+          <a href="about.html#whatwedo" target="_blank"><img src="whatdoh.png" class="img-top2" alt="Card Front"  width="205px" height="230"></a>
+          
+      </div>
+      <div class="card3 col">
+         <img src="whyus.png" alt="Card Back" width="235px" height="225">
+          <a href="about.html#whychooseus" target="_blank"><img src="whyush.png" class="img-top3" alt="Card Front"  width="245px" height="220"></a>
+          
+      </div>
+            
+   </div>
+
+   <div class="servline" >
+      <span >
+        SERVICES <!--Padding is optional-->
+      </span>
+    </div>
+
+ <div class="content">
+   
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="architecture.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+           
+            <a href="#" style="cursor: pointer;text-decoration: none;color: white;"> <p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+          
+            </div>
+        </div>
+      </div>
+    
+      <div class="flip-card" >
+          <div class="flip-card-inner">
+             <div class="flip-card-front">
+               <img src="license.png" alt="Avatar" style="width:300px;height:300px;">
+             </div>
+             <div class="flip-card-back">
+           
+                <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+          
+            </div>
+          </div>
+      </div>
+
+      <div class="flip-card" >
+           <div class="flip-card-inner">
+             <div class="flip-card-front">
+              <img src="marketing.png" alt="Avatar" style="width:300px;height:300px;">
+             </div>
+             <div class="flip-card-back">
+           
+                <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+          
+             </div>
+          </div>
+      </div>
+      <div class="flip-card" >
+         <div class="flip-card-inner">
+           <div class="flip-card-front">
+            <img src="clearance.png" alt="Avatar" style="width:300px;height:300px;">
+           </div>
+           <div class="flip-card-back">
+         
+              <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+        
+           </div>
+        </div>
+    </div>
+    <div class="flip-card" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+         <img src="consultancy.png" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+      
+           <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+     
+        </div>
+     </div>
+ </div>
+
+ <div class="flip-card" >
+   <div class="flip-card-inner">
+     <div class="flip-card-front">
+      <img src="placement.png" alt="Avatar" style="width:300px;height:300px;">
+     </div>
+     <div class="flip-card-back">
+   
+        <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+  
+     </div>
+  </div>
+</div>
+
+<div class="flip-card" >
+   <div class="flip-card-inner">
+     <div class="flip-card-front">
+      <img src="projimp.png" alt="Avatar" style="width:300px;height:300px;">
+     </div>
+     <div class="flip-card-back">
+   
+        <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+  
+     </div>
+  </div>
+</div>
+<div class="flip-card" >
+   <div class="flip-card-inner">
+     <div class="flip-card-front">
+      <img src="qmanage.png" alt="Avatar" style="width:300px;height:300px;">
+     </div>
+     <div class="flip-card-back">
+   
+        <a href="#" style="cursor: pointer;text-decoration: none;color: white;"><p style="font-family: 'Nanum Gothic', sans-serif; font-size: large; margin-top: 130px;">read more</p></a>
+  
+     </div>
+  </div>
+</div>
+</div>
+
+<div class="postline" >
+   <span >
+     RECENT POSTS <!--Padding is optional-->
+   </span>
+ </div>
+ 
+  <div class="recposts">
+    <div class="imgBox">
+     <img src="Coronavirus.jpg" width="500px" />
+     <div class="readmore"><a href="#">Read More</a></div>
+     
+   </div>
+   <div class="post1">
+      <p><br /><br /> <br /><br /><br /> <br />THIS IS POST 1.<br /><br /> <br /><br /><br /> <br /></p>
+   </div>
+ 
+
+ <div class="imgBox2">
+   <img src="vaccine.jfif" width="500px" />
+   <div class="readmore"><a href="#">Read More</a></div>
+   
+ </div>
+ <div class="post2">
+   <p><br /><br /> <br /><br /><br /> <br />THIS IS POST 2.<br /><br /> <br /><br /><br /> <br /></p>
+</div></div> 
+   
+<div class="recposts_resp">
+   <img src="Coronavirus.jpg" style="display: inline-block;">
+   <p style="display: inline-block;"><a href="#" style="cursor: pointer;">This is post 1.</a></p>
+   
+</div>
+<div class="recposts_resp2">
+   <img src="vaccine.jfif" style="display: inline-block;">
+   <p style="display: inline-block;"><a href="#" style="cursor: pointer;">This is post 1.</a></p>
+</div>
+
+<div class="upcomline">
+   <span >
+     UPCOMING EVENTS <!--Padding is optional-->
+   </span>
+ </div>
+
+ <div class="event1" data-aos="fade-right" >
+    <div class="eventdetail"><h3>3rd National Conference Of Medical Buzz </h3>
+       <p><img src="time.png" alt="timelogo" width="20px"> 11th of April 2021 &nbsp;&nbsp;&nbsp; <img src="location.png" alt="loacationlogo" width="20px">&nbsp;&nbsp;Sri Ganganagar </p>
+      </div>
+     
+        <div class="booknow">
+   <a href="contact.html" class="book"><p>BOOK <br /> NOW</p></a>
+        </div>
+ </div>
+
+ <div class="contactline" >
+   <span>
+     CONTACT US <!--Padding is optional-->
+   </span>
+ </div>
+
+ <div class="form">
+   <form action="" method="GET" >
+
+      <p>First Name: <input type="text" name="FName" required></p>
+
+      <p>Last Name: <input type="text" name="LName" required></p>
+
+      <label for="email">Your email:</label>
+      <input type="email" id="email" name="email">
+
+      <p>Your Phone No.:
+      <input type="tel" id="phone" name="phone" ></p>
+
+      <p>Your Message:<br />
+      <textarea name="add" id="add" cols="70" rows="6"  ></textarea> </p>
+
+      <p>Would you like to recieve our newsletter?</p>
+      <input type="radio" id="yes" name="newsletter" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="newsletter" value="no">
+      <label for="no">No</label><br>
+      
+      <input type="submit" value="SUBMIT"><br />
+   </form>
+ </div>
+
+ <div class="reviews">
+   <p>WHAT OUR CLIENTS THINK ABOUT US?</p>
+   <button class="leftb" onclick="plusDivs(-1)"><img src="leftb.png" alt="left" height="100px"></button>
+<button class="rightb"  onclick="plusDivs(1)"><img src="rightb.png" alt="right" height="100px"></button>
+   <div class="rev1 mySlides">
+      <img src="client.png" alt="client1img">
+      <p>We are taking services from Medical Buzz Healthcare Services since more than two years now 
+         in internal and external quality management along with marketing services. They have helped 
+         our hospital reach new heights! They have also helped in form of placement services 
+         by providing us many doctors and other healthcare professionals. We wish Medical Buzz a brighter future.<br /><br />
+         Mr. Vikas Sihag <br />
+         Managing Director<br />
+         SN Medanta, Sri Ganganagar.
+         
+      </p>
+      
+
+   </div>
+   <div class="rev1 mySlides" style="display: none;">
+      <img src="client.png" alt="client1img">
+      <p>We are taking services from Medical Buzz Healthcare. They helped us in recruiting doctors and that's 
+         why we are pleased to have their help. I wish Medical Buzz Healthcare a prosperous future.<br /><br />
+         Dr. Arvind Bansal <br />
+         Apex Hospital, Suratgarh.
+      </p>
+
+   </div>
+   
+ </div>
+ 
+
+<div class="footer">
+   <a href="#" class="fa fa-facebook"></a>
+   <a href="#" class="fa fa-linkedin"></a>
+   <a href="#" class="fa fa-twitter"></a>
+   <a href="#" class="fa fa-instagram"></a><br />
+   <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz@gmail.com</p>
+   <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">0987650987,&nbsp; &nbsp;1237654327</P>
+   <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
+</div>
+
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 130,
+        duration: 1300
+    });
+  </script>
+
+</body>
+</html>
