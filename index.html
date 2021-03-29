@@ -7,6 +7,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <title>Medical Buzz</title>
@@ -46,132 +47,7 @@ function closeNav() {
       *{
          box-sizing: border-box;
       }
-     @media screen and (min-width: 1039px){
-        .openbtn{
-           display: none;
-        }
-        .sidepanel{
-           display: none;
-        }
-        .recposts_resp{
-           display: none;
-        }
-        .recposts_resp2{
-           display: none;
-        }
-     }
-      @media screen and (max-width:1040px){
-         
-         img.mblogo{
-         position: fixed;
-         left: 45%;
-         top: 1%;
-         }
-         .headingtop{
-            display: none;
-         }
-         .subheadingtop{
-            display: none;
-         }
-         .main-navigation{
-            display: none;
-         }
-         .bookcons{
-            display: none;
-         }
-         .bookco{
-            position: relative;
-            left: 20%;
-            background-color: #0082B9;
-            padding: 10px;
-            display: inline-block;
-            text-decoration: none;
-            outline: none;
-            font-size: 25px;
-            margin-bottom: 10px;
-         }
-         .bookco:hover{
-            color: white;
-            cursor: pointer;
-         }
-
-         .sidepanel {
-            
-  height: auto; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #FDD566; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 40px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-}
-
-/* The sidepanel links */
-.sidepanel a {
-  position: relative;
-  left: 20%;
-  padding-bottom: 20px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  left: 85%;
-  width: 100%;
-  font-size: 36px;
-  
-  color: white;
-}
-.sidepanel .closebtn:hover{
-   color: #7f7f7f;
-}
-/* Style the button that is used to open the sidepanel */
-.openbtn {
-   
-  font-size: 30px;
-  cursor: pointer;
-  background-color: white;
-  color: #7F7F7F;
-  padding: 7px;
-  border: none;
-  outline: none;
-  
-}
-
-.openbtn:hover {
-  background-color: #FDD566;
-}
-
-
-
-
-.heading p{
-   font-size: 40px;
-}
-.tagline p{
-   font-size: 40px;
-}
-.backimg img{
-   object-fit: cover;
-   height: 600px;
-   width: 100%;
-}
-      }
+    
       body{
          margin: 0;
       }
@@ -284,38 +160,31 @@ li:hover li { float: none; }
    top: 2%;
    cursor: pointer;
 }
-.backimg img{
-   width: 100%;
-   
-}
-.backimg{
-   position: relative;
-  text-align: center;
-  color: white;
-}
 .heading{
-   position: absolute;
-   top: 310px;
-   
-   font-size: 50px;
+      position: absolute;
+      top: 370px;
+      z-index: 10;
+      font-size: 50px;
    left: 10%;
    color: #7F7F7F;
    font-family: 'Nanum Gothic', sans-serif;
    letter-spacing: 3px;
-   text-align: left;
-   
-}
-.tagline{
-   position: absolute;
-   top: 440px;
+    }
+
+    .tagline{
+      position: absolute;
+   top: 500px;
    color: #0082B9;
    font-size: 50px;
    left: 10%;
    font-family: 'Nanum Gothic', sans-serif;
    letter-spacing: 3px;
-   text-align: left;
-   
-}
+    }
+
+    .flickity-page-dots{
+      display: none;
+    }
+
 .aboutpart{
    background-color: #0082B9;
    position: absolute;
@@ -762,8 +631,9 @@ li:hover li { float: none; }
 }
 .footer{
    position: absolute;
-   top: 3900px;
+   top: 3370px;
    height: 200px;
+   
 
 }
 .mailfoot{
@@ -803,7 +673,7 @@ li:hover li { float: none; }
      border-bottom: 2.5px solid gray;
       text-align: center;
       position: relative;
-       top: 200px; 
+       top: 270px; 
 }
 .servline span{
    font-size: 45px;
@@ -819,7 +689,7 @@ li:hover li { float: none; }
     border-bottom: 2.5px solid gray;
      text-align: center;
      position: relative;
-      top: 920px; 
+      top: 990px; 
 }
 
 .postline span{
@@ -836,7 +706,7 @@ li:hover li { float: none; }
     border-bottom: 2.5px solid gray;
      text-align: center;
      position: relative;
-      top: 1500px;
+      top: 1570px;
 }
 
 .upcomline span{
@@ -852,7 +722,7 @@ li:hover li { float: none; }
     border-bottom: 2.5px solid gray; 
     text-align: center;
     position: relative;
-     top: 1800px;
+     top: 1870px;
 }
 .contactline span{
    font-size: 45px;
@@ -1093,6 +963,13 @@ li:hover li { float: none; }
        font-size: 30px;
     }
 }
+
+hr{
+   background-color: #7F7F7F;
+   height: 4px;
+    position:relative;
+     top: 2650px;
+}
 @media screen and (max-width:600px){ 
     
     
@@ -1125,12 +1002,179 @@ li:hover li { float: none; }
     }
     
 }
-@media screen and (max-width:620px){
+
+@media screen and (min-width: 1039px){
+        .openbtn{
+           display: none;
+        }
+        .sidepanel{
+           display: none;
+        }
+        .recposts_resp{
+           display: none;
+        }
+        .recposts_resp2{
+           display: none;
+        }
+     }
+      @media screen and (max-width:1040px){
+         
+         img.mblogo{
+         position: fixed;
+         left: 45%;
+         top: 1%;
+         }
+         .headingtop{
+            display: none;
+         }
+         .subheadingtop{
+            display: none;
+         }
+         .main-navigation{
+            display: none;
+         }
+         .bookcons{
+            display: none;
+         }
+         .bookco{
+            position: relative;
+            left: 20%;
+            background-color: #0082B9;
+            padding: 10px;
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+         .bookco:hover{
+            color: white;
+            cursor: pointer;
+         }
+
+         .sidepanel {
+            
+  height: auto; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #FDD566; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  position: relative;
+  left: 20%;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  width: 100%;
+  font-size: 36px;
+  
+  color: white;
+}
+.sidepanel .closebtn:hover{
+   color: #7f7f7f;
+}
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+   
+  font-size: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: #7F7F7F;
+  padding: 7px;
+  border: none;
+  outline: none;
+  
+}
+
+.openbtn:hover {
+  background-color: #FDD566;
+}
+
+.heading{
+   font-size: 40px;
+   left: 20%;
+   
+}
+.tagline{
+   font-size: 40px;
+   left: 20%;
+   
+}
+.arousel-cell{
+   width: 100%;
+}
+.backimage{
+   width: 1200px;
+   object-fit: cover;
+   
+   
+}
    .footer{
    position: absolute;
-   top: 6330px;
+   top: 4290px;
+   height: 200px;
+   left: 24%;
+}
+
+hr{
+   position: relative;
+   top: 3570px;
+}
+
+
+
+      }
+
+@media screen and (max-width:620px){
+.heading{
+   font-size: 40px;
+   
+   
+}
+.tagline{
+   font-size: 40px;
+   
+   
+}
+
+.backimage{
+   width: 100%;
+   object-fit: cover;
+}
+   .footer{
+   position: absolute;
+   top: 5530px;
    height: 200px;
 
+}
+
+hr{
+   position: relative;
+   top: 4820px;
 }
 .fa {
   
@@ -1303,12 +1347,16 @@ li:hover li { float: none; }
     }
 }
 
+
+
+
+
    </style>
 </head>
 <body>
    <div class="topbar">
        <img class="mblogo" src="mblogo.png" alt="logo" width="60px">
-       <span class="headingtop">MEDICAL BUZZ</span>
+       <span class="headingtop" >MEDICAL BUZZ</span>
        <span class="subheadingtop">HEALTHCARE PVT. LTD.</span>
        <ul class="main-navigation">
          <li><a href="index.html">Home</a></li>
@@ -1333,22 +1381,17 @@ li:hover li { float: none; }
    </div>
 
    
-    
+   <div class="main-carousel" data-flickity='{ "autoPlay": true, "wrapAround":false, "pauseAutoPlayOnHover": false }'>
+      <div class="carousel-cell"><span class="heading">MEDICAL BUZZ <br /> HEALTHCARE</span><span class="tagline"> #HELPING HEALTHCARE</span><img class="backimage" src="backimg.jpeg" alt="djoiok" width="1270px" height="600px"></div>
+      <div class="carousel-cell"><img src="image1.jpg" alt="djoi" width="1267px" height="600px"></div>
+      <div class="carousel-cell"><img src="image2.jpg" alt="djoi" width="1267px" height="600px"></div>
+      <div class="carousel-cell"><img src="image3.jpg" alt="djoi" width="1267px" height="600px"></div>
+      <div class="carousel-cell"><img src="image4.jpg" alt="djoi" width="1267px" height="600px"></div>
+      <div class="carousel-cell"><img src="image5.jpg" alt="djoi" width="1267px" height="600px"></div>
+      
+    </div>
 
-   <div class="backimg">
-      <img src="backimg.jpeg" alt="back">
-      <div class="heading">
-         <p>MEDICAL&nbsp; BUZZ<br />
-            HEALTHCARE 
-         
-         </p>
-      </div>
-      <div class="tagline">
-          <p>
-            #HELPING&nbsp; HEALTHCARE.
-          </p>
-      </div>
-   </div>
+   
    <div class="aboutpart">
       <div class="card col">
          <img src="whoimg.png" alt="Card Back" width="200px" height="220" style="text-align: center;">
@@ -1563,7 +1606,7 @@ li:hover li { float: none; }
    </form>
  </div>
 
- <div class="reviews">
+ <div class="reviews" style="display: none;">
    <p>WHAT OUR CLIENTS THINK ABOUT US?</p>
    <button class="leftb" onclick="plusDivs(-1)"><img src="leftb.png" alt="left" height="100px"></button>
 <button class="rightb"  onclick="plusDivs(1)"><img src="rightb.png" alt="right" height="100px"></button>
@@ -1593,6 +1636,7 @@ li:hover li { float: none; }
    
  </div>
  
+ <hr />
 
 <div class="footer">
    <a href="#" class="fa fa-facebook"></a>
@@ -1612,6 +1656,9 @@ li:hover li { float: none; }
         duration: 1300
     });
   </script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </body>
 </html>
