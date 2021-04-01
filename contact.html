@@ -8,6 +8,22 @@
     <title>Contact Us|Medical Buzz</title>
 </head>
 <script>
+   var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbyz7mG3wLvGjSxQ_ap9ZQ31ddz4dkLNi6uF_2SpB72YzX4kTLHFyoaPNCZOEq0bXz3D/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+</script>
+<script>
     function openNav() {
   document.getElementById("mySidepanel").style.width = "100%";
 }
@@ -638,7 +654,7 @@ li:hover li { float: none; }
     </div>
 
     <div class="form">
-        <form action="" method="GET" >
+        <form action="https://script.google.com/macros/s/AKfycbyz7mG3wLvGjSxQ_ap9ZQ31ddz4dkLNi6uF_2SpB72YzX4kTLHFyoaPNCZOEq0bXz3D/exec" method="GET" >
      
            <p>First Name: <input type="text" name="FName" required></p>
      
@@ -651,7 +667,7 @@ li:hover li { float: none; }
            <input type="tel" id="phone" name="phone" ></p>
      
            <p>Your Message:<br />
-           <textarea name="add" id="add" cols="70" rows="6"  ></textarea> </p>
+           <textarea name="message" id="add" cols="70" rows="6"  ></textarea> </p>
      
            <p>Would you like to recieve our newsletter?</p>
            <input type="radio" id="yes" name="newsletter" value="yes">
@@ -684,8 +700,8 @@ li:hover li { float: none; }
         <a href="#" class="fa fa-linkedin"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a><br />
-        <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz@gmail.com</p>
-        <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">0987650987,&nbsp; &nbsp;1237654327</P>
+        <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz17@gmail.com</p>
+        <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">9214649133,&nbsp; &nbsp;9982699920</P>
         <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
      </div>
 </body>
