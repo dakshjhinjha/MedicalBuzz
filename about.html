@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <title>About|Medical Buzz</title>
 </head>
 <script>
@@ -361,7 +363,7 @@ li:hover li { float: none; }
    background-color: white;
     padding: 0 20px;
     font-family: 'Nanum Gothic', sans-serif;
-    color: gray;
+    color: #0082B9;
 }
 
 .whatline{
@@ -377,7 +379,7 @@ li:hover li { float: none; }
    background-color: white;
     padding: 0 20px;
     font-family: 'Nanum Gothic', sans-serif;
-    color: gray;
+    color: #0082B9;
 }
 
 .whyline{
@@ -393,7 +395,7 @@ li:hover li { float: none; }
    background-color: white;
     padding: 0 20px;
     font-family: 'Nanum Gothic', sans-serif;
-    color: gray;
+    color: #0082B9;
 }
 
 
@@ -550,7 +552,7 @@ li:hover li { float: none; }
 
 .fa-facebook {
    position: relative;
-   left: 80%;
+   left: 60%;
   
   color: #7f7f7fff;
 }
@@ -563,7 +565,7 @@ li:hover li { float: none; }
 }
 .fa-twitter {
    position: relative;
-   left: 80%;
+   left: 60%;
   color: #7f7f7fff;
 }
 .fa-linkedin:hover{
@@ -571,7 +573,7 @@ li:hover li { float: none; }
 }
 .fa-linkedin {
    position: relative;
-   left: 80%;
+   left: 60%;
   
   color:#7f7f7fff;
 }
@@ -580,13 +582,13 @@ li:hover li { float: none; }
 }
 .fa-instagram {
    position: relative;
-   left: 80%;
+   left: 60%;
   color: #7f7f7fff;
 }
 .fa-envelope{
    color:#7f7f7fff ;
    position: relative;
-   left: 80%;
+   left: 60%;
    margin-top: 20px;
 }
 .fa-envelope:hover{
@@ -601,7 +603,7 @@ li:hover li { float: none; }
 }
 .mailfoot{
    position: relative;
-   left: 90%;
+   left: 70%;
    top: -40px;
    width: 50%;
    font-family: 'Nanum Gothic', sans-serif ;
@@ -611,14 +613,14 @@ li:hover li { float: none; }
 .fa-phone{
    color:#7f7f7fff ;
    position: relative;
-   left: 77%;
+   left: 57%;
    top: -50px;
    margin-top: 20px;
 }
 
 .phonefoot{
    position: relative;
-   left: 87%;
+   left: 67%;
    top: -90px;
    width: 50%;
    font-family: 'Nanum Gothic', sans-serif ;
@@ -626,7 +628,7 @@ li:hover li { float: none; }
 }
 .copyright{
    position: relative;
-   left: 60% ;
+   left: 40% ;
    top: -80px;
    
    font-family: 'Nanum Gothic', sans-serif ;
@@ -636,7 +638,33 @@ li:hover li { float: none; }
 
  
  
+      @media screen and (max-width: 930px){
+ 
+ .container h2{
+   font-size: 20px;
+ }
+ .title{
+   font-size: 20px;
+   top: -80px;
+ }
+}
+@media screen and (max-width: 869px){
+  .intro{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 824px){
+  .intro{
+    font-size: 14px;
+  }
+}
 
+@media screen and (max-width: 780px){
+.waliatit{
+  top: -100px;
+}
+}
+     
 
 
 
@@ -733,6 +761,16 @@ li:hover li { float: none; }
    font-family: 'Nanum Gothic', sans-serif ;
    color: #7f7f7fff;
 }
+.container h2{
+    font-size: 30px;
+  }
+  .title{
+    font-size:30px;
+    top: -120px;
+  }
+  .intro{
+    font-size: 20px;
+  }
 }
 
 
@@ -803,7 +841,6 @@ li:hover li { float: none; }
   
       
           
-          
       <div class="row">
         <div class="column">
           <div class="card">
@@ -811,10 +848,10 @@ li:hover li { float: none; }
             <div class="container">
               <h2 style="position: relative; top: 30px;">Dr. Rajeev Munjal</h2>
               <p class="title">Founder Director</p>
-              <p>Leadership | Marketing</p>
-              <p>Dr. Munjal is a physician by profession, working in the healthcare industry since...</p>
+              <p class="intro">Leadership | Marketing</p>
+              <p class="intro">Dr. Munjal is a physician by profession, working in the healthcare industry since...</p>
               <button id="b1" class="rm" onclick="togglediv('munjal')" type="button">READ MORE  </button>
-       <p id="munjal" class="open" style="display:none;line-height: 30px;">more than 15 years now. <br />
+       <p id="munjal" class="open intro" style="display:none;line-height: 30px;"> industry since more than 15 years now. <br />
         He has a strong passion for hospital management and that drive brought him to the field of
         administration. Presently he is working as associate director in Medanta S.N. Superspeciality Hospital,
         Sriganganagar, Rajasthan.<br />
@@ -836,12 +873,12 @@ li:hover li { float: none; }
             <div class="container">
               <h2 style="position: relative; top: 30px;">Dr. Shuchin Bajaj</h2>
               <p class="title">Advisor</p>
-              <p>Management | Healthcare</p>
-              <p>Dr. Bajaj is the Founder Director of Ujala Cygnus Hospitals, which is currently operating...  
+              <p class="intro">Management | Healthcare</p>
+              <p class="intro">Dr. Bajaj is the Founder Director of Ujala Cygnus Hospitals, which is currently operating...  
                 
               </p>
                 <button id="b2" class="rm" onclick="togglediv('bajaj')" type="button">READ MORE  </button>
-                <p id="bajaj" class="open" style="display:none;line-height: 30px;">
+                <p id="bajaj" class="open intro" style="display:none;line-height: 30px;">
                   twelve hospitals in Delhi, Uttarakhand, Uttar Pradesh and Haryana with a combined bed strength of 1200 beds and more than 1800 employees.
                   Shuchin is a highly qualified medical scholar. After completing his MBBS from PGIMS, Rohtak, he did his Doctorate in Internal Medicines (MD) from Dr S N Medical College, Jodhpur in 2004. Apart from the foregoing, he also did Certified Professional course on Diabetes Management and Total Control from American Academy of Continuing Medical Education, USA in 2008, Advanced Program in Strategic Management from I.I.M. Calcutta in 2013 and Advanced Program in Cardiac Emergencies from Boston University in 2014.
                  Dr Bajaj was the recipient of the British Government’s 2015 Chevening Gurukul Fellowship for Leadership and Excellence award at King’s College London, where he spent considerable time studying the various facets of Leadership, its various challenges and its learnings for India. 
@@ -862,33 +899,34 @@ li:hover li { float: none; }
             <img src="walia3.png" alt="mrwalia" style="width:100%">
             <div class="container">
               <h2 style="position: relative; top: 30px;">Balwinder Singh Walia</h2>
-              <p class="title">Advisor</p>
-              <p >Operations | Management</p>
-              <p>25 Years of experience in healthcare industry across hospitals, medical devices...</p>
+              <p class="title waliatit">Advisor</p>
+              <p class="intro">Operations | Management</p>
+              <p class="intro">25 Years of experience in healthcare industry across hospitals, medical devices...</p>
               <button id="b3" class="rm" onclick="togglediv('Walia')" type="button">READ MORE  </button>
-              <p id="Walia" class="open" style="display:none;line-height: 30px;">
+              <p id="Walia" class="open intro" style="display:none;line-height: 30px;">
                   and pharmaceutical sector. He has worked PAN India and Asia Pacific markets handling business ,
                    operations and P&L for different organisations . He owns to his credit successful launch of
                     different greenfield projects, business transformation and business turnaround activities .
                   He currently works as Facility Director for Narayana Multispecialty Hospital Jaipur
                   He has been associated with some of the leading organizations like Fortis healthcare ,
-                   C K Birla Group, Hero Cycles , Widex Denmark and Berlin Chemie Menarini , in his career span.
+                   C K Birla Group, Hero Cycles , Widex Denmark and Berlin Chemie Menarini , in his career span
                 </p>
             </div>
           </div>
         </div>
+       
         
-        
+      
         <div class="column">
           <div class="card">
             <img src="prashant.png" alt="prashant" style="width:100%" >
             <div class="container"  style="left: 10px;">
               <h2 style="position: relative; top: 30px;">Prashant Munjal</h2>
               <p class="title">Financial Advisor</p>
-              <p >Finance | Management</p>
-              <p>Chartered Accountant by profession and Active Member of Medical Buzz by choice.</p>
+              <p class="intro">Finance | Management</p>
+              <p class="intro">Chartered Accountant by profession and Active Member of Medical Buzz by choice.</p>
               <button id="b3" class="rm" onclick="togglediv('prashant')" type="button">READ MORE  </button>
-              <p id="prashant" class="open" style="display:none;line-height: 30px;">
+              <p id="prashant" class="open intro" style="display:none;line-height: 30px;">
                 He had specific interest in financial matters associated with healthcare
                  sector and has been an indispensable part of Team Medicalbuzz since long
                 </p>
@@ -898,33 +936,33 @@ li:hover li { float: none; }
         
         
         
-        <div class="column" >
+        <div class="column">
           <div class="card">
             <img src="shifali.png" alt="mrwalia" style="width:100%">
             <div class="container">
               <h2 style="position: relative; top: 30px;">Dr. Shifali Munjal</h2>
               <p class="title">Content Creator</p>
-              <p >Healthcare | Content Management</p>
-              <p>She is a dentist by profession. Besides being associated with healthcare sector she possess...</p>
+              <p class="intro">Healthcare | Content Management</p>
+              <p class="intro">She is a dentist by profession. Besides being associated with healthcare sector she possess...</p>
               <button id="b3" class="rm" onclick="togglediv('shifali')" type="button">READ MORE  </button>
-              <p id="shifali" class="open" style="display:none;line-height: 30px;">
+              <p id="shifali" class="open intro" style="display:none;line-height: 30px;">
                 excellent command over English language, and skillset for writing editorials for medical buzz.
                  She is associated with Medical Buzz as Sub editor and content writer from past 3 years
                 </p>
             </div>
           </div>
         </div>
-
-        <div class="column" >
+    
+        <div class="column">
           <div class="card">
             <img src="drarnika.png" alt="drarnika" style="width:100%">
             <div class="container">
               <h2 style="position: relative; top: 30px;">Dr. Arnika Mukhija</h2>
               <p class="title">Advisor</p>
-              <p >Leadership | Healthcare | Management</p>
-              <p>Founder & Director, Q- HET Consultants, Dr. Arnika Mukhija is a renowned...</p>
+              <p class="intro">Operations | Quality</p>
+              <p class="intro">Founder & Director, Q- HET Consultants, Dr. Arnika Mukhija is a renowned Quality Consultant...</p>
               <button id="b3" class="rm" onclick="togglediv('arnika')" type="button">READ MORE  <a id="whatwedo"></a></button>
-              <p id="arnika" class="open" style="display:none;line-height: 30px;">
+              <p id="arnika" class="open intro" style="display:none;line-height: 30px;">
                 Quality Consultant and a Reputed Administrator in the field of Hospital Industry,
                  having a vast experience in Operations, Quality and Business development having a
                   immense knowledge of Medicolegal Systems.
@@ -933,10 +971,11 @@ li:hover li { float: none; }
             </div> 
           </div>
         </div>
-
-
+    
+    
         
       </div>
+      
       
       <div class="whatline">
         <span>
@@ -983,6 +1022,10 @@ If you are in search of any of these services, we are happy to help.</p>
         <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">9214649133,&nbsp; &nbsp;9982699920</P>
         <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
      </div>
+
+
+     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>       
 
