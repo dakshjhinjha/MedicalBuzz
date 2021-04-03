@@ -34,6 +34,13 @@ function closeNav() {
 }
 </script>
 <style>
+hr {
+   background-color: #7F7F7F;
+   height: 4px;
+    position: relative;
+   top: 1170px;
+}
+
 .fa {
   
   font-size: 30px;
@@ -160,12 +167,13 @@ body{
       .mblogo{
          position: fixed;
          left: 4%;
-         top: 1%;
+         top: 5px;
+         width: 60px;
       }
       .headingtop{
          position: fixed;
          left: 8.5%;
-         top: 1%;
+         top: 5px;
          font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
          color: #7F7F7F;
          font-size: 21px ;
@@ -174,7 +182,7 @@ body{
       .subheadingtop{
          position: fixed;
          left: 8.3%;
-         top: 5%;
+         top: 30px;
          font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
          color: #7F7F7F;
          font-size: 14px;
@@ -186,7 +194,7 @@ body{
 ul.main-navigation {
    position: fixed;
    left: 23%;
-   top: 3%;
+   top: 15px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -238,7 +246,7 @@ li:hover li { float: none; }
    padding-bottom: 5px;
    position: fixed;
    left: 75%;
-   top: 2%;
+   top: 10px;
 }
 
 .bookcons:hover{
@@ -253,7 +261,7 @@ li:hover li { float: none; }
    padding-bottom: 5px;
    position: fixed;
    left: 75%;
-   top: 2%;
+   top: 10px;
    cursor: pointer;
 }
 .heading{
@@ -339,11 +347,14 @@ li:hover li { float: none; }
 
 @media screen and (max-width:1040px){
 
-
+   hr {
+   
+   top: 890px;
+}
     
    .footer{
    position: absolute;
-   top: 5130px;
+   top: 1530px;
    height: 200px;
 
 }
@@ -358,7 +369,7 @@ li:hover li { float: none; }
 
 .fa-facebook {
    
-   left: 20%;
+   left: 50%;
   
   
 }
@@ -368,52 +379,52 @@ li:hover li { float: none; }
 
 .fa-twitter {
    
-   left: 20%;
+   left: 50%;
   
 }
 
 .fa-linkedin {
    
-   left: 20%;
+   left: 50%;
   
   
 }
 
 .fa-instagram {
   
-   left: 20%;
+   left: 50%;
   
 }
 .fa-envelope{
    
-   left: 20%;
+   left: 50%;
    
 }
 
 
 .mailfoot{
    
-   left: 30%;
+   left: 60%;
    width: 60%;
    
 }
 
 .fa-phone{
    
-   left: 20%;
+   left: 50%;
    
 }
 
 .phonefoot{
    width: 60%;
-   left: 30%;
+   left: 60%;
    
 }
 
 .copyright{
    
    padding-right: 0px;
-   left: 4% ;
+   left: 34% ;
    
 }
 
@@ -538,9 +549,13 @@ li:hover li { float: none; }
 }
 
 @media screen and (max-width:620px){
+   hr {
+   
+   top: 1090px;
+}
     .footer{
    position: absolute;
-   top: 1650px;
+   top: 1710px;
    height: 200px;
 
 }
@@ -616,10 +631,166 @@ li:hover li { float: none; }
 
 }
 
+@media only screen and (min-width:1295px){
+   hr {
+   
+   top: 1070px;
+}
+
+   .fa-facebook {
+   left: 130%;
+  }
+
+
+.fa-twitter {
+   left: 130%;
+  }
+
+.fa-linkedin {
+   left: 130%;
+  }
+
+.fa-instagram {
+   
+   left: 130%;
+  
+}
+.fa-envelope{
+   
+   left: 130%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 140%;
+  
+}
+
+.fa-phone{
+   
+   left: 127%;
+  
+}
+
+.phonefoot{
+   
+   left: 137%;
+   
+}
+.copyright{
+   
+   left: 107% ;
+   
+}
+}
+
+   
+@media only screen and (min-width:1441px){
+   hr {
+   
+   top: 840px;
+}
+   .topbar{
+           height: 70px;
+           
+        }
+        .mblogo{
+          width: 80px;
+          top: 6px;
+        }
+        .headingtop{
+           font-size: 30px;
+           top: 6px;
+        }
+        .subheadingtop{
+           font-size: 23px;
+           top: 39px;
+        }
+        ul.main-navigation{
+           left: 24%;
+           width: 50%;
+           top: 23px;
+        }
+        ul.main-navigation li{
+           padding-left:5%;
+        }
+        ul.main-navigation li a{
+           padding-left: 3%;
+           font-size: 25px;
+        }
+        .bookcons{
+           padding-left: 35px;
+           padding-right: 35px;
+           padding-bottom: 10px;
+           padding-top:10px ;
+           left: 70%;
+           font-size:25px ;
+           top: 12px;
+        }
+        .bookcons:hover{
+         padding-left: 35px;
+           padding-right: 35px;
+           padding-bottom: 10px;
+           padding-top:10px ;
+           left: 70%;
+           font-size:25px ;
+           top: 12px;
+        }
+        .fa-facebook {
+   left: 170%;
+  }
+
+
+.fa-twitter {
+   left: 170%;
+  }
+
+.fa-linkedin {
+   left: 170%;
+  }
+
+.fa-instagram {
+   
+   left: 170%;
+  
+}
+.fa-envelope{
+   
+   left: 170%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 180%;
+  
+}
+
+.fa-phone{
+   
+   left: 167%;
+  
+}
+
+.phonefoot{
+   
+   left: 177%;
+   
+}
+.copyright{
+   
+   left: 147% ;
+   
+}
+}
+
 </style>
 <body>
     <div class="topbar">
-        <img class="mblogo" src="mblogo.png" alt="logo" width="60px">
+        <img class="mblogo" src="mblogo.png" alt="logo">
         <span class="headingtop">MEDICAL BUZZ</span>
         <span class="subheadingtop">HEALTHCARE PVT. LTD.</span>
         <ul class="main-navigation">
@@ -693,7 +864,7 @@ li:hover li { float: none; }
         </form>
       </div>
 
-      <hr style="background-color: #7F7F7F;height: 4px; "/>
+      <hr />
 
       <div class="footer">
         <a href="#" class="fa fa-facebook"></a>
@@ -701,7 +872,7 @@ li:hover li { float: none; }
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a><br />
         <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz17@gmail.com</p>
-        <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">9214649133,&nbsp; &nbsp;9982699920</P>
+        <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">9214649133,&nbsp; &nbsp;7849930135</P>
         <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
      </div>
 </body>
