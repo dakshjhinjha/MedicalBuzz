@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blog Posts|Medical Buzz</title>
+    <script>
+        function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+    </script>
+    <style>
+        body{
+         margin: 0;
+      }
+      iframe{
+          position: relative;
+          top: 50px;
+          left: 15%;
+          height: 500px;
+      }
+      .topbar{
+         overflow: hidden;
+         top: 0;
+         width: 100%;
+         position: fixed;
+         z-index: 3;
+         height: 53px;
+         background-color: white;
+         
+     }
+      .mblogo{
+         position: fixed;
+         left: 4%;
+         top: 5px;
+         width: 60px;
+      }
+      .headingtop{
+         position: fixed;
+         left: 8.5%;
+         top: 5px;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 21px ;
+         font-weight: 600;
+      }
+      .subheadingtop{
+         position: fixed;
+         left: 8.3%;
+         top: 30px;
+         font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+         color: #7F7F7F;
+         font-size: 14px;
+         letter-spacing: 0.5px;
+         font-weight: 600;
+      }
+      
+
+ul {
+   position: fixed;
+   left: 23%;
+   top: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  z-index: 3;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  padding-left: 28px;
+  
+}
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding-left: 19px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #7F7F7F;
+  font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+ul li a:hover { 
+  color: #0082B9;
+  
+   }
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+.bookcons{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #0082B9;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 10px;
+}
+
+.bookcons:hover{
+   font-family: 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #FDD566;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   position: fixed;
+   left: 75%;
+   top: 10px;
+   cursor: pointer;
+}
+
+.fa {
+  
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   position: relative;
+   left: 110%;
+  
+  color: #7f7f7fff;
+}
+
+.fa-facebook:hover{
+    color: #2980b9;
+}
+.fa-twitter:hover{
+    color: #2980b9;
+}
+.fa-twitter {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-linkedin:hover{
+    color: #2980b9;
+}
+.fa-linkedin {
+   position: relative;
+   left: 110%;
+  
+  color:#7f7f7fff;
+}
+.fa-instagram:hover{
+    color: #2980b9;
+}
+.fa-instagram {
+   position: relative;
+   left: 110%;
+  color: #7f7f7fff;
+}
+.fa-envelope{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 110%;
+   margin-top: 20px;
+}
+.fa-envelope:hover{
+   color:#2980b9 ;
+   cursor: pointer;
+}
+.footer{
+   position: absolute;
+   top: 670px;
+   height: 200px;
+   
+
+}
+hr{
+   background-color: #7F7F7F;
+   height: 4px;
+    position:relative;
+     top: 90px;
+}
+.mailfoot{
+   position: relative;
+   left: 120%;
+   top: -40px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+
+.fa-phone{
+   color:#7f7f7fff ;
+   position: relative;
+   left: 107%;
+   top: -50px;
+   margin-top: 20px;
+}
+
+.phonefoot{
+   position: relative;
+   left: 117%;
+   top: -90px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+.copyright{
+   position: relative;
+   left: 87% ;
+   top: -80px;
+   font-family: 'Nanum Gothic', sans-serif ;
+   color: #7f7f7fff;
+}
+@media screen and (max-width:1040px){
+   .footer{
+   position: absolute;
+   top: 5130px;
+   height: 200px;
+
+}
+.fa {
+  
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   
+   left: 20%;
+  
+  
+}
+
+
+
+
+.fa-twitter {
+   
+   left: 20%;
+  
+}
+
+.fa-linkedin {
+   
+   left: 20%;
+  
+  
+}
+
+.fa-instagram {
+  
+   left: 20%;
+  
+}
+.fa-envelope{
+   
+   left: 20%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 30%;
+   width: 60%;
+   
+}
+
+.fa-phone{
+   
+   left: 20%;
+   
+}
+
+.phonefoot{
+   width: 60%;
+   left: 30%;
+   
+}
+
+.copyright{
+   
+   padding-right: 0px;
+   left: 4% ;
+   
+}
+}
+
+
+@media screen and (min-width: 1039px){
+        .openbtn{
+           display: none;
+        }
+        .sidepanel{
+           display: none;
+        }
+        .recposts_resp{
+           display: none;
+        }
+        .recposts_resp2{
+           display: none;
+        }
+     }
+
+     @media screen and (max-width:1040px){
+         
+         img.mblogo{
+         position: fixed;
+         left: 45%;
+         top: 1%;
+         }
+         .headingtop{
+            display: none;
+         }
+         .subheadingtop{
+            display: none;
+         }
+         .main-navigation{
+            display: none;
+         }
+         .bookcons{
+            display: none;
+         }
+         .bookco{
+            position: relative;
+            left: 20%;
+            background-color: #0082B9;
+            padding: 10px;
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+         .bookco:hover{
+            color: white;
+            cursor: pointer;
+         }
+
+         .sidepanel {
+            
+  height: auto; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #FDD566; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  position: relative;
+  left: 20%;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  width: 100%;
+  font-size: 36px;
+  
+  color: white;
+}
+.sidepanel .closebtn:hover{
+   color: #7f7f7f;
+}
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+   
+  font-size: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: #7F7F7F;
+  padding: 7px;
+  border: none;
+  outline: none;
+  
+}
+
+.openbtn:hover {
+  background-color: #FDD566;
+}
+
+
+   .footer{
+   position: absolute;
+   top: 810px;
+   height: 200px;
+   left: 24%;
+}
+
+hr{
+   position: relative;
+   top: 70px;
+}
+iframe{
+    height: 700px;
+}
+
+
+      }
+
+      @media screen and (max-width:620px){
+
+   .footer{
+   position: absolute;
+   top: 790px;
+   height: 200px;
+
+}
+
+hr{
+   position: relative;
+   top: 60px;
+}
+.fa {
+  
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+   
+   left: 0%;
+  
+  
+}
+
+
+
+
+.fa-twitter {
+   
+   left: 0%;
+  
+}
+
+.fa-linkedin {
+   
+   left: 0%;
+  
+  
+}
+
+.fa-instagram {
+  
+   left: 0%;
+  
+}
+.fa-envelope{
+   
+   left: 0%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 15%;
+   width: 60%;
+   
+}
+
+.fa-phone{
+   
+   left: 0%;
+   
+}
+
+.phonefoot{
+   width: 60%;
+   left: 15%;
+   
+}
+
+.copyright{
+   
+   padding-right: 0px;
+   left: -10% ;
+   
+}
+
+
+   
+   
+}
+
+@media only screen and (min-width:1441px){
+        .topbar{
+           height: 70px;
+           
+        }
+        .main-carousel{
+           background-color: #0082B9;
+        }
+        .mblogo{
+          width: 80px;
+          top: 6px;
+        }
+        .headingtop{
+           font-size: 30px;
+           top: 6px;
+        }
+        .subheadingtop{
+           font-size: 23px;
+           top: 39px;
+        }
+        ul{
+           left: 24%;
+           width: 50%;
+           top: 23px;
+        }
+        ul li{
+           padding-left:5%;
+        }
+        ul li a{
+           padding-left: 3%;
+           font-size: 25px;
+        }
+        .bookcons{
+           padding-left: 35px;
+           padding-right: 35px;
+           padding-bottom: 10px;
+           padding-top:10px ;
+           left: 70%;
+           font-size:25px ;
+           top: 12px;
+        }
+        .bookcons:hover{
+         padding-left: 35px;
+           padding-right: 35px;
+           padding-bottom: 10px;
+           padding-top:10px ;
+           left: 70%;
+           font-size:25px ;
+           top: 12px;
+        }
+        
+
+       .fa-facebook {
+   left: 160%;
+  }
+
+
+.fa-twitter {
+   left: 160%;
+  }
+
+.fa-linkedin {
+   left: 160%;
+  }
+
+.fa-instagram {
+   
+   left: 160%;
+  
+}
+.fa-envelope{
+   
+   left: 160%;
+   
+}
+
+
+.mailfoot{
+   
+   left: 170%;
+  
+}
+
+.fa-phone{
+   
+   left: 157%;
+  
+}
+
+.phonefoot{
+   
+   left: 167%;
+   
+}
+.copyright{
+   
+   left: 137% ;
+   
+}
+     }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <img class="mblogo" src="mblogo.png" alt="logo">
+        <span class="headingtop" >MEDICAL BUZZ</span>
+        <span class="subheadingtop">HEALTHCARE PVT. LTD.</span>
+        <ul class="main-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <span class="bookcons"><a href="contact.html" style="text-decoration: none;color: white;">Book Consultation</a></span>
+        <div id="mySidepanel" class="sidepanel">
+           
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <button onclick="" class="bookco">Book Consultation</button>
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="index.html#services">Services</a>
+       <a href="blog.html">Blog</a>
+       <a href="contact.html">Contact Us</a>
+     </div>
+     
+     <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+
+    <iframe src="Medical Buzz New Edition.pdf#toolbar=0" width="70%" >
+    </iframe>
+
+    <hr />
+
+<div class="footer">
+   <a href="#" class="fa fa-facebook"></a>
+   <a href="#" class="fa fa-linkedin"></a>
+   <a href="#" class="fa fa-twitter"></a>
+   <a href="#" class="fa fa-instagram"></a><br />
+   <i class="fa fa-envelope" style="font-size:24px"></i><p class="mailfoot">medicalbuzz17@gmail.com</p>
+   <i class="fa fa-phone" style="font-size:24px"></i><P class="phonefoot">9214649133,&nbsp; &nbsp;7849930135</P>
+   <p class="copyright">&copy; 2021 All Rights Reserved @ Medical Buzz Healthcare Pvt. Ltd.</p>
+</div>
+</body>
+</html>
